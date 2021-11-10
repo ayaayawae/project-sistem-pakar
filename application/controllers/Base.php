@@ -22,4 +22,24 @@ class Base extends CI_Controller {
 	{
 		$this->load->view('base');
 	}
+
+	public function home(){
+
+	}
+
+	public function aboutUs(){
+		
+	}
+
+	public function test(){
+		
+	}
+
+	public function rules(){
+		
+	}
+
+	public function result(){
+		
+	}
 }
