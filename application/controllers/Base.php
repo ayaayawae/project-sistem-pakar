@@ -36,7 +36,7 @@ class Base extends CI_Controller {
 	}
 
 	public function rules(){
-		
+		$this->load->view('pages/rules_v');
 	}
 
 	public function result(){
