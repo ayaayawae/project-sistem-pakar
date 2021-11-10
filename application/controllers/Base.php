@@ -40,6 +40,6 @@ class Base extends CI_Controller {
 	}
 
 	public function result(){
-		
+		$this->load->view('pages/result_v');
 	}
 }
