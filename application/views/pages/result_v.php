@@ -21,8 +21,7 @@
     <div class="container" style="margin-top: 100px;">
         <div class="row">
             <div class="col-5 d-flex justify-content-center" style="align-items: center;">
-                <h1>Gambar</h1>
-                <img src="" alt="">
+                <img src="<?= base_url('assets/images/logosistemanalis.png') ?>" alt="">
             </div>
             <div class="col-7 ">
                 <div class="row">
