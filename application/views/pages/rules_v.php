@@ -15,6 +15,17 @@
         .card-img-top {
             border-radius: 50%;
             width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: -5rem;
+            background-color: #bfbfbf;
+        }
+
+        .card {
+            width: 18rem;
+            height: 11rem; 
+            background-color:#bfbfbf;
+            border-radius: 40px;
         }
     </style>
 
@@ -28,22 +39,49 @@
             </div>
         </div>
 
-        <div class="row text-center mx-auto">
+        <div class="row text-center mx-auto" style="margin-top: 8rem;">
             <div class="col-4">
-                <div class="card mx-auto" style="width: 18rem">
+                <div class="card mx-auto">
                     <img src="<?= base_url('assets/images/user.png') ?>" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="card-text">
+                            Usahakan mengerjakan tes secara mandiri tanpa pengaruh dari luar
+                        </p>
                     </div>
                 </div>
             </div>
             <div class="col-4">
-                <h1>asdasd</h1>
+                <div class="card mx-auto">
+                    <img src="<?= base_url('assets/images/user.png') ?>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">
+                            Menjawab setiap pertanyaan dengan jujur walaupun kamu tidak suka dengan jawaban tersebut
+                        </p>
+                    </div>
+                </div>
             </div>
             <div class="col-4">
-                <h1>asdasd</h1>
+                <div class="card mx-auto">
+                    <img src="<?= base_url('assets/images/user.png') ?>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">
+                            Usahakan mengerjakan dengan waktu yang tidak terlalu lama
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <div class="container mt-5 text-right">
+            <div class="d-flex justify-content-end">
+                <button style="border-radius: 40px; width: 8rem; background: greenyellow">
+                    <a href="" style="text-decoration: none; color: gray">
+                        Mulai -->
+                    </a>
+                </button>
+            </div>
+        </div>
+
     </div>
 </body>
 
