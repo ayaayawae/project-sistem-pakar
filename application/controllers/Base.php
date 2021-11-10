@@ -24,7 +24,7 @@ class Base extends CI_Controller {
 	}
 
 	public function home(){
-
+		$this->load->view('pages/home_v.php');
 	}
 
 	public function aboutUs(){
@@ -32,6 +32,7 @@ class Base extends CI_Controller {
 	}
 
 	public function test(){
+		$this->load->view('pages/test_v.php');
 		
 	}
 
