@@ -35,7 +35,7 @@
     <div class="container">
         <p class="greeting">Ikuti Tes ini untuk membantu kamu yang seorang mahasiswa jurusan Teknik Informatika menetukan profesi di masa depan</p>
         <div style="text-align: center" class="">
-            <button class="btn btn-primary">Mulai <i class="fas fa-long-arrow-alt-right"></i></button>
+            <a class="btn btn-primary" href="<?= base_url('index.php/base/rules') ?>">Mulai <i class="fas fa-long-arrow-alt-right"></i></a>
         </div>
 
     </div>

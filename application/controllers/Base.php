@@ -20,7 +20,7 @@ class Base extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('base');
+		$this->home();
 	}
 
 	public function home(){

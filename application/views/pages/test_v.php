@@ -32,20 +32,20 @@
             </div>
             <hr>
         </div>
-        <div class="row" style="text-align: center">
+        <div class="row mt-5" style="text-align: center">
             <h3>Lorem ipsum lor dolor sit amet?</h3>
-        </div>
-        <div class="row" style="text-align: center; ">
+        </div> 
+        <div class="row mt-5" style="text-align: center; ">
             <div class="col-md-6">
                 <button class="btn btn-danger" style="font-size: 24px; background-color: #EF8E8E; border: none; border-radius: 50px; width: 100px">Tidak</button>
             </div>
             <div class="col-md-6">
                 <button class="btn btn-primary" style="font-size: 24px; background-color: #8ECCEF; border: none; border-radius: 50px; width: 100px">Ya</button>
-            </div>
+            </div>  
         </div>
-        <div class="row" >
+        <div class="row mt-5" >
             <div class="col-md-6"> &#60;&#60;Ke pertanyaan sebelumnya </div>
-            <div class="col-md-6" style="text-align: right">Lanjut>></div>
+            <a href="<?= base_url('index.php/base/result') ?>" class="col-md-6" style="text-align: right">Lanjut>></a>
         </div>
     </div>
 </body>
