@@ -24,7 +24,9 @@ class Base extends CI_Controller {
 	}
 
 	public function home(){
-		$this->load->view('pages/home_v.php');
+		$data['style'] = $this->load->view('include/style',NULL,TRUE);
+		$data['navbar'] = $this->load->view('components/navbar',NULL,TRUE);
+		$this->load->view('pages/home_v.php', $data);
 	}
 
 	public function aboutUs(){
