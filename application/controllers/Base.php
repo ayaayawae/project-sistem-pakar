@@ -34,15 +34,21 @@ class Base extends CI_Controller {
 	}
 
 	public function test(){
-		$this->load->view('pages/test_v.php');
+		$data['style'] = $this->load->view('include/style',NULL,TRUE);
+		$data['navbar'] = $this->load->view('components/navbar',NULL,TRUE);
+		$this->load->view('pages/test_v.php', $data);
 		
 	}
 
 	public function rules(){
-		$this->load->view('pages/rules_v');
+		$data['style'] = $this->load->view('include/style',NULL,TRUE);
+		$data['navbar'] = $this->load->view('components/navbar',NULL,TRUE);
+		$this->load->view('pages/rules_v', $data);
 	}
 
 	public function result(){
-		$this->load->view('pages/result_v');
+		$data['style'] = $this->load->view('include/style',NULL,TRUE);
+		$data['navbar'] = $this->load->view('components/navbar',NULL,TRUE);
+		$this->load->view('pages/result_v',  $data);
 	}
 }

@@ -5,13 +5,13 @@
 <style>
   .cover-container {
     max-width: 42em;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     border-radius: 30px;
   }
 
   .home {
     text-align: center;
-    background: linear-gradient(rgba(52, 190, 174, 1),rgba(52, 190, 174, 0.3)), url(<?= base_url("assets/images/cover.webp") ?>);
+    background: linear-gradient(rgba(52, 190, 174, 1), rgba(52, 190, 174, 0.3)), url(<?= base_url("assets/images/cover.webp") ?>);
     background-size: cover;
     height: 95%;
     display: flex;
@@ -20,10 +20,39 @@
     color: white;
   }
 
-  html,body {
-    height: 100%;
+  html,
+  body {
+    height: 105%;
   }
-  .navbar{
+
+  .navbar {
     background-color: rgba(52, 190, 174) !important;
+    color: white !important;
+  }
+
+  .card-img-top {
+    border-radius: 50%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -5rem;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .card {
+    width: 18rem;
+    height: 11rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 40px;
+  }
+
+  .test {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    padding: 0;
+    width: 100%;
+    height: 100%;
   }
 </style>
