@@ -2,6 +2,10 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Base extends CI_Controller {
+	public function __construct() {
+		parent::__construct();
+		$this->load->model('pertanyaan_model');
+	}
 
 	/**
 	 * Index Page for this controller.
@@ -36,8 +40,8 @@ class Base extends CI_Controller {
 	public function test(){
 		$data['style'] = $this->load->view('include/style',NULL,TRUE);
 		$data['navbar'] = $this->load->view('components/navbar',NULL,TRUE);
+		$data['question'] = $this->pertanyaan_model->getAllQuestions();
 		$this->load->view('pages/test_v.php', $data);
-		
 	}
 
 	public function rules(){
