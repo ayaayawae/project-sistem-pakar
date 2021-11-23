@@ -62,15 +62,4 @@
     width: 100%;
     height: 100%;
   }
-
-  .btnQues {
-    /* background-color: #4d4d4d!important;
-    border-radius: 50px;
-    font-size: 17px;
-    font-family: 'Source Sans Pro', sans-serif;
-    padding: 6px 18px; */
-    /* color: white; */
-  }
-
-  
 </style>

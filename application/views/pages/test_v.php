@@ -35,7 +35,7 @@
             </div>
             <div class="row mt-5">
                 <div class="col-md-6">
-                    <button class="btnQues" onclick="prevQues()">
+                    <button class="btn btn-secondary" id="btnBack" style="border-radius: 50px;" onclick="prevQues()">
                         &#60;&#60;Ke pertanyaan sebelumnya
                     </button>
                 </div>
@@ -43,15 +43,21 @@
                 <form class="col-md-6" style="text-align: right" action="<?= base_url('index.php/base/submitAnswer') ?>" method="POST">
                     <input type="text" name="answer" style="display: none;" id="ans">
                     <input type="text" name="id_routing" style="display: none;" value="<?= $pertanyaan[0]['id_routing'] ?>">
-                    <button type="submit" id="btnSubmit" class="btn btn-secondary disabled" style="border: none; background: none;">Lanjut>></button>
+                    <button type="submit" id="btnSubmit" class="btn btn-secondary disabled">Lanjut>></button>
                 </form>
             </div>
         </div>
     </div>
     <script>
+        let id = <?= $pertanyaan[0]['id_routing'] ?>;
+        if(id == 1){
+            document.getElementById("btnBack").removeAttribute("class");
+            document.getElementById("btnBack").setAttribute("class","btn btn-secondary disabled");
+        }
         function setAnswer(answer) {
             document.getElementById("ans").setAttribute("value", answer);
-            document.getElementById("btnSubmit").removeAttribute("disabled");
+            document.getElementById("btnSubmit").removeAttribute("class");
+            document.getElementById("btnSubmit").setAttribute("class","btn btn-secondary");
         }
 
         function prevQues() {
