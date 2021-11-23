@@ -31,19 +31,26 @@
   }
 
   .card-img-top {
-    border-radius: 50%;
     width: 50%;
     margin-left: auto;
     margin-right: auto;
     margin-top: -5rem;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0);
   }
 
   .card {
     width: 18rem;
     height: 11rem;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 10px 17px 24px 0px rgba(0,0,0,0.7);
+    -webkit-box-shadow: 10px 17px 24px 0px rgba(0,0,0,0.7);
+    -moz-box-shadow: 10px 17px 24px 0px rgba(0,0,0,0.7);
     border-radius: 40px;
+    border: 3px black solid;
+  }
+
+  .card-text {
+    color: black;
   }
 
   .test {
@@ -55,4 +62,15 @@
     width: 100%;
     height: 100%;
   }
+
+  .btnQues {
+    /* background-color: #4d4d4d!important;
+    border-radius: 50px;
+    font-size: 17px;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 6px 18px; */
+    /* color: white; */
+  }
+
+  
 </style>

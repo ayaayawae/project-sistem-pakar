@@ -32,7 +32,7 @@
                 </div>
                 <div class="col-4">
                     <div class="card mx-auto">
-                        <img src="<?= base_url('assets/images/user.png') ?>" class="card-img-top" alt="...">
+                        <img src="<?= base_url('assets/images/honest.png') ?>" class="card-img-top" alt="...">
                         <div class="card-body">
                             <p class="card-text">
                                 Menjawab setiap pertanyaan dengan jujur walaupun kamu tidak suka dengan jawaban tersebut
@@ -42,7 +42,7 @@
                 </div>
                 <div class="col-4">
                     <div class="card mx-auto">
-                        <img src="<?= base_url('assets/images/user.png') ?>" class="card-img-top" alt="...">
+                        <img src="<?= base_url('assets/images/clock.png') ?>" class="card-img-top" alt="...">
                         <div class="card-body">
                             <p class="card-text">
                                 Usahakan mengerjakan dengan waktu yang tidak terlalu lama

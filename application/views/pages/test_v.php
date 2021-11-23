@@ -34,19 +34,28 @@
                 </div>
             </div>
             <div class="row mt-5">
-                <div class="col-md-6"> &#60;&#60;Ke pertanyaan sebelumnya </div>
+                <div class="col-md-6">
+                    <button class="btnQues" onclick="prevQues()">
+                        &#60;&#60;Ke pertanyaan sebelumnya
+                    </button>
+                </div>
+
                 <form class="col-md-6" style="text-align: right" action="<?= base_url('index.php/base/submitAnswer') ?>" method="POST">
                     <input type="text" name="answer" style="display: none;" id="ans">
                     <input type="text" name="id_routing" style="display: none;" value="<?= $pertanyaan[0]['id_routing'] ?>">
-                    <button type="submit" id="btnSubmit" disabled style="border: none; background: none;" >Lanjut>></button>
+                    <button type="submit" id="btnSubmit" class="btn btn-secondary disabled" style="border: none; background: none;">Lanjut>></button>
                 </form>
             </div>
         </div>
     </div>
     <script>
-        function setAnswer(answer){
-            document.getElementById("ans").setAttribute("value",answer);
+        function setAnswer(answer) {
+            document.getElementById("ans").setAttribute("value", answer);
             document.getElementById("btnSubmit").removeAttribute("disabled");
+        }
+
+        function prevQues() {
+            window.history.go(-1);
         }
     </script>
 </body>
