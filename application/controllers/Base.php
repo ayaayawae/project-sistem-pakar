@@ -1,8 +1,10 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Base extends CI_Controller {
-	public function __construct() {
+class Base extends CI_Controller
+{
+	public function __construct()
+	{
 		parent::__construct();
 		$this->load->model('pertanyaan_model');
 	}
@@ -27,32 +29,58 @@ class Base extends CI_Controller {
 		$this->home();
 	}
 
-	public function home(){
-		$data['style'] = $this->load->view('include/style',NULL,TRUE);
-		$data['navbar'] = $this->load->view('components/navbar',NULL,TRUE);
+	public function home()
+	{
+		$data['style'] = $this->load->view('include/style', NULL, TRUE);
+		$data['navbar'] = $this->load->view('components/navbar', NULL, TRUE);
 		$this->load->view('pages/home_v.php', $data);
 	}
 
-	public function aboutUs(){
-		
+	public function aboutUs()
+	{
 	}
 
-	public function test(){
-		$data['style'] = $this->load->view('include/style',NULL,TRUE);
-		$data['navbar'] = $this->load->view('components/navbar',NULL,TRUE);
-		$data['question'] = $this->pertanyaan_model->getAllQuestions();
-		$this->load->view('pages/test_v.php', $data);
+	public function test($id_routing)
+	{
+		$data['style'] = $this->load->view('include/style', NULL, TRUE);
+		$data['navbar'] = $this->load->view('components/navbar', NULL, TRUE);
+
+		$id_convert = $this->pertanyaan_model->getConvertId($id_routing);
+		$id_convert = $id_convert[0]['id_real'];
+
+		if (substr($id_convert, 0, 1) == 'Q') {
+			$data['pertanyaan'] = $this->pertanyaan_model->getSpecificQuestion($id_convert);
+			$data['pertanyaan'][0]['id_routing'] = $id_routing;
+			$this->load->view('pages/test_v.php', $data);
+		} else {
+			redirect(base_url('index.php/base/result/'.$id_routing));
+		}
 	}
 
-	public function rules(){
-		$data['style'] = $this->load->view('include/style',NULL,TRUE);
-		$data['navbar'] = $this->load->view('components/navbar',NULL,TRUE);
+	public function submitAnswer()
+	{
+		$id_routing = $this->input->post('id_routing');
+		$answer = $this->input->post('answer');
+		$next_id_routing = $this->pertanyaan_model->getNextIdRouting($id_routing, $answer);
+		print_r($next_id_routing);
+		redirect(base_url('index.php/base/test/' . $next_id_routing[0]['next']));
+	}
+
+	public function rules()
+	{
+		$data['style'] = $this->load->view('include/style', NULL, TRUE);
+		$data['navbar'] = $this->load->view('components/navbar', NULL, TRUE);
 		$this->load->view('pages/rules_v', $data);
 	}
 
-	public function result(){
-		$data['style'] = $this->load->view('include/style',NULL,TRUE);
-		$data['navbar'] = $this->load->view('components/navbar',NULL,TRUE);
+	public function result($id)
+	{	$id_convert = $this->pertanyaan_model->getConvertId($id);
+		$id_convert = $id_convert[0]['id_real'];
+
+		$data['style'] = $this->load->view('include/style', NULL, TRUE);
+		$data['navbar'] = $this->load->view('components/navbar', NULL, TRUE);
+
+		$data['solusi'] = $this->pertanyaan_model->getSolution($id_convert);
 		$this->load->view('pages/result_v',  $data);
 	}
 }

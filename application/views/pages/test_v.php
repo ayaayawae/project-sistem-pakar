@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,9 @@
     <title>Test</title>
     <?= $style ?>
 </head>
+
 <body>
-<?= $navbar ?>
+    <?= $navbar ?>
     <div class="test mt-4">
         <div class="container">
             <div class="row">
@@ -21,21 +23,32 @@
                 <hr>
             </div>
             <div class="row mt-5" style="text-align: center">
-                <h3>Lorem ipsum lor dolor sit amet?</h3>
-            </div> 
+                <h3><?= $pertanyaan[0]['pertanyaan'] ?></h3>
+            </div>
             <div class="row mt-5" style="text-align: center; ">
                 <div class="col-md-6">
-                    <button class="btn btn-danger" style="font-size: 24px; background-color: #EF8E8E; border: none; border-radius: 50px; width: 100px">Tidak</button>
+                    <button class="btn btn-danger" onclick="setAnswer('n')" style="font-size: 24px; background-color: #EF8E8E; border: none; border-radius: 50px; width: 100px">Tidak</button>
                 </div>
                 <div class="col-md-6">
-                    <button class="btn btn-primary" style="font-size: 24px; background-color: #8ECCEF; border: none; border-radius: 50px; width: 100px">Ya</button>
-                </div>  
+                    <button class="btn btn-primary" onclick="setAnswer('y')" style="font-size: 24px; background-color: #8ECCEF; border: none; border-radius: 50px; width: 100px">Ya</button>
+                </div>
             </div>
-            <div class="row mt-5" >
+            <div class="row mt-5">
                 <div class="col-md-6"> &#60;&#60;Ke pertanyaan sebelumnya </div>
-                <a href="<?= base_url('index.php/base/result') ?>" class="col-md-6" style="text-align: right">Lanjut>></a>
+                <form class="col-md-6" style="text-align: right" action="<?= base_url('index.php/base/submitAnswer') ?>" method="POST">
+                    <input type="text" name="answer" style="display: none;" id="ans">
+                    <input type="text" name="id_routing" style="display: none;" value="<?= $pertanyaan[0]['id_routing'] ?>">
+                    <button type="submit" id="btnSubmit" disabled style="border: none; background: none;" >Lanjut>></button>
+                </form>
             </div>
         </div>
     </div>
+    <script>
+        function setAnswer(answer){
+            document.getElementById("ans").setAttribute("value",answer);
+            document.getElementById("btnSubmit").removeAttribute("disabled");
+        }
+    </script>
 </body>
+
 </html>
