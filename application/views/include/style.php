@@ -62,4 +62,8 @@
     width: 100%;
     height: 100%;
   }
+
+  .btn {
+    border-radius: 50px;
+  }
 </style>

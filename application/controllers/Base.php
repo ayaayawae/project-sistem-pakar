@@ -38,6 +38,9 @@ class Base extends CI_Controller
 
 	public function aboutUs()
 	{
+		$data['style'] = $this->load->view('include/style', NULL, TRUE);
+		$data['navbar'] = $this->load->view('components/navbar', NULL, TRUE);
+		$this->load->view('pages/aboutUs_v.php', $data);
 	}
 
 	public function test($id_routing)

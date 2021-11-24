@@ -8,7 +8,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href=""><b>About Us</b> </a>
+          <a class="nav-link active" aria-current="page" href="<?= base_url('index.php/base/aboutUs') ?>"><b>About Us</b> </a>
         </li>
       </ul>
     </div>

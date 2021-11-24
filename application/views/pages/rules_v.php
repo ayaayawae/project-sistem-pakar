@@ -53,11 +53,11 @@
             </div>
             <div class="container mt-5 text-right">
                 <div class="d-flex justify-content-end">
-                    <button style="border-radius: 40px; width: 8rem; background: greenyellow">
-                        <a href="<?= base_url('index.php/base/test/1') ?>" style="text-decoration: none; color: gray">
-                            Mulai -->
-                        </a>
-                    </button>
+                    <a href="<?= base_url('index.php/base/test/1') ?>" style="text-decoration: none; color: gray">
+                        <button style="border-radius: 40px; width: 8rem; background: greenyellow">
+                            Mulai
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
