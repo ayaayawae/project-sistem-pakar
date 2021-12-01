@@ -5,8 +5,11 @@
 <style>
   .cover-container {
     max-width: 42em;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 30px;
+    /* background-color: rgba(0, 0, 0, 0.3); */
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    border: 4px solid rgba(0, 0, 0, 0.7);
+    color: black;
   }
 
   .home {
@@ -17,12 +20,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
   }
 
   html,
   body {
-    height: 105%;
+    height: 100%;
   }
 
   .navbar {
@@ -41,12 +43,12 @@
   .card {
     width: 18rem;
     height: 11rem;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 0.8);
     box-shadow: 10px 17px 24px 0px rgba(0,0,0,0.7);
     -webkit-box-shadow: 10px 17px 24px 0px rgba(0,0,0,0.7);
     -moz-box-shadow: 10px 17px 24px 0px rgba(0,0,0,0.7);
-    border-radius: 40px;
-    border: 3px black solid;
+    border-radius: 20px;
+    border: 3px rgba(0, 0, 0, 0.7) solid;
   }
 
   .card-text {
@@ -61,6 +63,25 @@
     padding: 0;
     width: 100%;
     height: 100%;
+    color: white;
+  }
+
+  .container-test{
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    border: 4px solid rgba(0, 0, 0, 0.5);
+    color: black;
+    padding: 20px;
+    height: 400px;
+  }
+
+  .result-container{
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    border: 4px solid rgba(0, 0, 0, 0.5);
+    color: black;
+    padding: 20px;
+    /* height: 00px; */
   }
 
   .btn {
