@@ -65,7 +65,6 @@ class Base extends CI_Controller
 		$id_routing = $this->input->post('id_routing');
 		$answer = $this->input->post('answer');
 		$next_id_routing = $this->pertanyaan_model->getNextIdRouting($id_routing, $answer);
-		print_r($next_id_routing);
 		redirect(base_url('index.php/base/test/' . $next_id_routing[0]['next']));
 	}
 
